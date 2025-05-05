@@ -13,7 +13,7 @@ jobs:
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: stable  # ✅ Leave this only — remove "channel"
+          flutter-version: '3.29.3'  # ✅ Replace with your desired stable version
 
       - name: Build Web
         run: flutter build web

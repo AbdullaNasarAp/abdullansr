@@ -13,7 +13,7 @@ jobs:
       - name: Install Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: 'stable'
+          flutter-version: stable  # ✅ Leave this only — remove "channel"
 
       - name: Build Web
         run: flutter build web

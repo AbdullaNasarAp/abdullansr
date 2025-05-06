@@ -1,6 +1,6 @@
 # abdullansr
 
-A new Flutter project.
+Explore the portfolio of Abdulla Nasar, a skilled Flutter and web developer specializing in modern mobile apps, responsive websites, and digital solutions. Let's build something great together!
 
 ## Getting Started
 

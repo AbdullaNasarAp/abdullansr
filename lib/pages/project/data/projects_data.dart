@@ -1,4 +1,4 @@
-import 'package:abdullansr/models/project.dart';
+import 'package:abdullansr/pages/project/models/project.dart';
 
 final List<Project> projects = [
   // ──────────────────────────────

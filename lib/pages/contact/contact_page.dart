@@ -1,5 +1,5 @@
 import 'package:abdullansr/widgets/animated_background_for_about.dart';
-import 'package:abdullansr/widgets/contact_section.dart';
+import 'package:abdullansr/pages/contact/widget/contact_section.dart';
 import 'package:abdullansr/widgets/footer.dart';
 import 'package:abdullansr/widgets/nav_bar.dart';
 import 'package:flutter/material.dart';

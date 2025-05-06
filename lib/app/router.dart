@@ -1,7 +1,7 @@
-import 'package:abdullansr/pages/about_page.dart';
-import 'package:abdullansr/pages/contact_page.dart';
-import 'package:abdullansr/pages/home_page.dart';
-import 'package:abdullansr/pages/projects_page.dart';
+import 'package:abdullansr/pages/about/about_page.dart';
+import 'package:abdullansr/pages/contact/contact_page.dart';
+import 'package:abdullansr/pages/home/home_page.dart';
+import 'package:abdullansr/pages/project/projects_page.dart';
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(

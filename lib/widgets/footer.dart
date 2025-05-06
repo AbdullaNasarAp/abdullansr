@@ -126,27 +126,31 @@ class Footer extends StatelessWidget {
               Divider(color: Colors.grey.shade300),
               SizedBox(height: sectionSpacing / 2),
               isMobile
-                  ? Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        '© ${DateTime.now().year} Abdulla Nasar. All rights reserved',
-                        style: TextStyles.bodySmall(context).copyWith(
-                          color: Colors.grey.shade600,
-                          fontSize: textScaler.scale(11),
-                        ),
-                        textAlign: TextAlign.center,
-                      ).animate().fadeIn(delay: 400.ms),
-                      SizedBox(height: 8),
-                      Text(
-                        'Made with Flutter 💙',
-                        style: TextStyles.bodySmall(context).copyWith(
-                          color: Colors.grey.shade600,
-                          fontSize: textScaler.scale(11),
-                        ),
-                        textAlign: TextAlign.center,
-                      ).animate().fadeIn(delay: 500.ms),
-                    ],
+                  ? Center(
+                    // Wrap with Center widget
+                    child: Column(
+                      mainAxisSize:
+                          MainAxisSize.min, // Important for proper centering
+                      children: [
+                        Text(
+                          '© ${DateTime.now().year} Abdulla Nasar. All rights reserved',
+                          style: TextStyles.bodySmall(context).copyWith(
+                            color: Colors.grey.shade600,
+                            fontSize: textScaler.scale(11),
+                          ),
+                          textAlign: TextAlign.center,
+                        ).animate().fadeIn(delay: 400.ms),
+                        const SizedBox(height: 8),
+                        Text(
+                          'Made with Flutter 💙',
+                          style: TextStyles.bodySmall(context).copyWith(
+                            color: Colors.grey.shade600,
+                            fontSize: textScaler.scale(11),
+                          ),
+                          textAlign: TextAlign.center,
+                        ).animate().fadeIn(delay: 500.ms),
+                      ],
+                    ),
                   )
                   : Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

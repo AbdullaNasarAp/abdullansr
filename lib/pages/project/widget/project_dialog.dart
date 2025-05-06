@@ -1,6 +1,6 @@
 // lib/widgets/premium_project_dialog.dart
 import 'package:abdullansr/core/colors.dart';
-import 'package:abdullansr/models/project.dart';
+import 'package:abdullansr/pages/project/models/project.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:carousel_slider/carousel_slider.dart';

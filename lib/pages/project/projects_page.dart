@@ -2,7 +2,7 @@
 import 'package:abdullansr/widgets/animated_background_for_about.dart';
 import 'package:abdullansr/widgets/footer.dart';
 import 'package:abdullansr/widgets/nav_bar.dart';
-import 'package:abdullansr/widgets/projects_section.dart';
+import 'package:abdullansr/pages/project/widget/projects_section.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

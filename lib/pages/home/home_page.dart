@@ -1,6 +1,6 @@
 import 'package:abdullansr/widgets/animated_background_for_about.dart';
 import 'package:abdullansr/widgets/footer.dart';
-import 'package:abdullansr/widgets/hero_section.dart';
+import 'package:abdullansr/pages/home/widget/hero_section.dart';
 import 'package:abdullansr/widgets/loading_screen.dart';
 import 'package:abdullansr/widgets/nav_bar.dart';
 import 'package:flutter/material.dart';
@@ -68,7 +68,7 @@ class _HomePageState extends State<HomePage> {
             child: Column(
               children: [
                 const HeroSection(),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.2),
+                // SizedBox(height: MediaQuery.of(context).size.height * 0.050),
                 const Footer(),
               ],
             ),

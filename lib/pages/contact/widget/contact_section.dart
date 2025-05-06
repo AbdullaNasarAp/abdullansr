@@ -1,7 +1,7 @@
 import 'package:abdullansr/core/colors.dart';
 import 'package:abdullansr/core/text_styles.dart';
-import 'package:abdullansr/widgets/contact_form.dart';
-import 'package:abdullansr/widgets/contact_info_card.dart';
+import 'package:abdullansr/pages/contact/widget/contact_form.dart';
+import 'package:abdullansr/pages/contact/widget/contact_info_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';

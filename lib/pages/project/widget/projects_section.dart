@@ -1,11 +1,11 @@
 // lib/widgets/premium_projects_section.dart
 import 'package:abdullansr/core/colors.dart';
 import 'package:abdullansr/core/text_styles.dart';
-import 'package:abdullansr/data/projects_data.dart';
-import 'package:abdullansr/models/project.dart';
-import 'package:abdullansr/widgets/project_card.dart';
-import 'package:abdullansr/widgets/project_dialog.dart';
-import 'package:abdullansr/widgets/project_filter_chip.dart';
+import 'package:abdullansr/pages/project/data/projects_data.dart';
+import 'package:abdullansr/pages/project/models/project.dart';
+import 'package:abdullansr/pages/project/widget/project_card.dart';
+import 'package:abdullansr/pages/project/widget/project_dialog.dart';
+import 'package:abdullansr/pages/project/widget/project_filter_chip.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';

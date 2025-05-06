@@ -1,5 +1,5 @@
 import 'package:abdullansr/core/text_styles.dart';
-import 'package:abdullansr/models/project.dart';
+import 'package:abdullansr/pages/project/models/project.dart';
 import 'package:flutter/material.dart';
 
 class PremiumProjectCard extends StatefulWidget {

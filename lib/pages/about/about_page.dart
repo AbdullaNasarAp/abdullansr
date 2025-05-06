@@ -1,11 +1,11 @@
 // lib/pages/about_page.dart
 import 'package:abdullansr/core/colors.dart';
-import 'package:abdullansr/widgets/about_section.dart';
+import 'package:abdullansr/pages/about/widget/about_section.dart';
 import 'package:abdullansr/widgets/animated_background_for_about.dart';
-import 'package:abdullansr/widgets/education_section.dart';
+import 'package:abdullansr/pages/about/widget/education_section.dart';
 import 'package:abdullansr/widgets/footer.dart';
 import 'package:abdullansr/widgets/nav_bar.dart';
-import 'package:abdullansr/widgets/skills_section.dart';
+import 'package:abdullansr/pages/about/widget/skills_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';

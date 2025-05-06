@@ -3,10 +3,12 @@ import 'package:abdullansr/core/colors.dart';
 import 'package:abdullansr/widgets/about_section.dart';
 import 'package:abdullansr/widgets/animated_background_for_about.dart';
 import 'package:abdullansr/widgets/education_section.dart';
+import 'package:abdullansr/widgets/footer.dart';
 import 'package:abdullansr/widgets/nav_bar.dart';
 import 'package:abdullansr/widgets/skills_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutPage extends StatelessWidget {
@@ -14,14 +16,19 @@ class AboutPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentPath = GoRouterState.of(context).uri.toString();
     return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(70),
+        child: NavBar(currentPath: currentPath),
+      ),
       body: Stack(
         children: [
           const AnimatedAboutBackground(),
           SingleChildScrollView(
             child: Column(
               children: [
-                const NavBar(),
+                // NavBar(currentPath: currentPath),
                 Container(
                   padding: const EdgeInsets.symmetric(vertical: 40),
                   child: Column(
@@ -42,6 +49,7 @@ class AboutPage extends StatelessWidget {
                       //   child: const TestimonialsSection(),
                       // ),
                       const SizedBox(height: 80),
+                      const Footer(),
                     ],
                   ),
                 ),

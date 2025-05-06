@@ -43045,10 +43045,10 @@ A.a4m.prototype={
 $0(){return A.hc(A.bF("https://maps.google.com/?q=Bengaluru",0,null))},
 $S:0}
 A.a4n.prototype={
-$0(){return A.hc(A.bF("https://linkedin.com/in/your-profile",0,null))},
+$0(){return A.hc(A.bF("https://www.linkedin.com/in/abdullanasarap/",0,null))},
 $S:0}
 A.a4o.prototype={
-$0(){return A.hc(A.bF("https://github.com/your-username",0,null))},
+$0(){return A.hc(A.bF("https://github.com/AbdullaNasarAp",0,null))},
 $S:0}
 A.a4p.prototype={
 $0(){return A.hc(A.bF("https://twitter.com/your-handle",0,null))},
@@ -43092,10 +43092,10 @@ A.a9e.prototype={
 $0(){return A.qw(this.a).mj("/contact",null)},
 $S:0}
 A.a9f.prototype={
-$0(){return A.hc(A.bF("https://linkedin.com/in/your-profile",0,null))},
+$0(){return A.hc(A.bF("https://www.linkedin.com/in/abdullanasarap/",0,null))},
 $S:0}
 A.a9g.prototype={
-$0(){return A.hc(A.bF("https://github.com/your-username",0,null))},
+$0(){return A.hc(A.bF("https://github.com/AbdullaNasarAp",0,null))},
 $S:0}
 A.a9h.prototype={
 $0(){return A.hc(A.bF("mailto:abdullansr.connect@gmail.com",0,null))},

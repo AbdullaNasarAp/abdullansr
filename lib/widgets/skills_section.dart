@@ -220,29 +220,39 @@ class SkillsSection extends StatelessWidget {
     required double percentage,
     required Duration delay,
   }) {
+    final isMobile = MediaQuery.of(context).size.width < 600;
+
     return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
+      padding: EdgeInsets.only(bottom: isMobile ? 12 : 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min, // Shrink-wrap content
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(skill, style: TextStyles.bodyLarge(context)),
+              Flexible(
+                child: Text(
+                  skill,
+                  style: TextStyles.bodyLarge(
+                    context,
+                  ).copyWith(fontSize: isMobile ? 14 : null),
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
               Text(
                 '${(percentage * 100).toInt()}%',
-                style: TextStyles.bodyLarge(
-                  context,
-                ).copyWith(color: AppColors.textSecondary),
+                style: TextStyles.bodyLarge(context).copyWith(
+                  color: AppColors.textSecondary,
+                  fontSize: isMobile ? 14 : null,
+                ),
               ),
             ],
           ).animate().fadeIn(delay: delay),
-
-          const SizedBox(height: 8),
-
+          SizedBox(height: isMobile ? 6 : 8),
           LinearProgressIndicator(
                 value: percentage,
-                minHeight: 8,
+                minHeight: isMobile ? 6 : 8,
                 backgroundColor: AppColors.primary.withOpacity(0.1),
                 valueColor: AlwaysStoppedAnimation<Color>(AppColors.primary),
                 borderRadius: BorderRadius.circular(4),

@@ -21,6 +21,8 @@ class _PremiumProjectCardState extends State<PremiumProjectCard> {
 
   @override
   Widget build(BuildContext context) {
+    final isMobile = MediaQuery.of(context).size.width < 600;
+
     return MouseRegion(
       onEnter: (_) => setState(() => _isHovered = true),
       onExit: (_) => setState(() => _isHovered = false),
@@ -28,27 +30,27 @@ class _PremiumProjectCardState extends State<PremiumProjectCard> {
         onTap: widget.onTap,
         child: Container(
           width: double.infinity,
-          height: 300,
+          height: isMobile ? 250 : 300, // Reduced height for mobile
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(16),
             boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.1),
-                blurRadius: 15,
+                blurRadius: 12,
                 spreadRadius: 1,
-                offset: Offset(0, 8),
+                offset: Offset(0, 6),
               ),
             ],
           ),
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(16),
             child: Stack(
               children: [
                 // Background image
                 Image.asset(
                   widget.project.imageUrl,
                   width: double.infinity,
-                  height: 300,
+                  height: isMobile ? 250 : 300,
                   fit: BoxFit.cover,
                 ),
 
@@ -72,27 +74,27 @@ class _PremiumProjectCardState extends State<PremiumProjectCard> {
                     color: Colors.black.withOpacity(0.4),
                     child: Center(
                       child: Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 20,
-                          vertical: 12,
+                        padding: EdgeInsets.symmetric(
+                          horizontal: isMobile ? 16 : 20,
+                          vertical: isMobile ? 10 : 12,
                         ),
                         decoration: BoxDecoration(
                           color: Colors.white,
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(24),
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
-                              blurRadius: 10,
-                              offset: Offset(0, 4),
+                              blurRadius: 8,
+                              offset: Offset(0, 3),
                             ),
                           ],
                         ),
-                        child: const Text(
+                        child: Text(
                           'Know More',
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
-                            fontSize: 16,
+                            fontSize: isMobile ? 14 : 16,
                           ),
                         ),
                       ),
@@ -101,27 +103,34 @@ class _PremiumProjectCardState extends State<PremiumProjectCard> {
 
                 // Project title and description at bottom
                 Padding(
-                  padding: const EdgeInsets.all(20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        widget.project.title,
-                        style: TextStyles.bodyLarge(context).copyWith(
-                          color: Colors.white,
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold,
+                  padding: EdgeInsets.all(isMobile ? 12 : 16),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text(
+                          widget.project.title,
+                          style: TextStyles.bodyLarge(context).copyWith(
+                            color: Colors.white,
+                            fontSize: isMobile ? 18 : 20,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        widget.project.shortDescription,
-                        style: TextStyles.bodyMedium(
-                          context,
-                        ).copyWith(color: Colors.white.withOpacity(0.9)),
-                      ),
-                    ],
+                        SizedBox(height: isMobile ? 6 : 8),
+                        Text(
+                          widget.project.shortDescription,
+                          style: TextStyles.bodyMedium(context).copyWith(
+                            color: Colors.white.withOpacity(0.9),
+                            fontSize: isMobile ? 12 : 14,
+                          ),
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
